@@ -1,39 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import Hero from './component/Hero';
-// import PortalDemo from './component/PortalDemo';
-// import FRParentInput from './component/FRParentInput';
-// import FocusInput from './component/FocusInput';
-// import RefsDemo from './component/RefsDemo';
-// import FragmentDemo from './component/FragmentDemo';
-// import LifeCycleA from './component/LifeCycleA';
-// import Table from './component/Table'
-// import PureComp from './component/PureComp'
-// import ParentComp from './component/ParentComp';
-import ErrorBoundary from './component/ErrorBoundary';
+import ClickCounterTwo from './component/ClickCounterTwo';
+import Counter1 from './component/Counter1';
+import HoverCounterTwo from './component/HoverCounterTwo';
+// import User from './component/User';
+// import ClickCounter from './component/ClickCounter';
+// import HoverCounter from './component/HoverCounter';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ErrorBoundary>
-          <Hero heroName={'Batman'} />
-        </ErrorBoundary>
-        <ErrorBoundary>
-          <Hero heroName={'Superman'} />
-        </ErrorBoundary>
-        <ErrorBoundary>
-          <Hero heroName={'jocker'} />
-        </ErrorBoundary>
-        {/* <PortalDemo/> */}
-        {/* <FRParentInput/> */}
-        {/* <FocusInput/> */}
-        {/* <RefsDemo/> */}
-        {/* <ParentComp/> */}
-        {/* <PureComp/> */}
-        {/* <Table/> */}
-        {/* <FragmentDemo/> */}
-        {/* <LifeCycleA/> */}
+        <Counter1>{(count, increamentCount) => <ClickCounterTwo count={count} increamentCount={increamentCount}/>}</Counter1>
+        <Counter1>{(count, increamentCount) => <HoverCounterTwo count={count} increamentCount={increamentCount}/>}</Counter1>
+        {/* <ClickCounterTwo/>
+        <HoverCounterTwo/>
+        <User render={(isLoggedIn) => isLoggedIn ? 'Ashish' : 'Guest'}/> */}
+        {/* <ClickCounter name='Ashish'/>
+        <HoverCounter/> */}
       </div>
     );
   }
