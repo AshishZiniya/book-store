@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-// import HookCounter from './component/HookCounter';
-import HookCounterTwo from './component/HookCounterTwo';
-// import ClassCounter from './component/ClassCounter';
+import ClassComponentOne from './component/ClassComponentOne';
+import HookCounterOne from './component/HookCounterOne';
+// import HookCounterFour from './component/HookCounterFour';
+// import HookCounterThree from './component/HookCounterThree';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <HookCounterTwo/>
-        {/* <ClassCounter/> */}
+        <ClassComponentOne/>
+        <HookCounterOne/>
+        {/* <HookCounterFour/> */}
+        {/* <HookCounterThree/> */}
       </div>
     );
   }
