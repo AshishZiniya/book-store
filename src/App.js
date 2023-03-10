@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import DataFetching from './component/DataFetching';
-// import IntervalClassCounter from './component/IntervalClassCounter';
-// import IntervalHookCounter from './component/IntervalHookCounter';
+import CounterThree from './component/CounterThree';
+// import CounterTwo from './component/CounterTwo';
+// import CounterOne from './component/CounterOne';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <DataFetching/>
-        {/* <IntervalClassCounter/> */}
-        {/* <IntervalHookCounter/> */}
-      </div>
-    );
-  }
-
+function App() {
+  return (
+    <div className="App">
+      <CounterThree/>
+      {/* <CounterTwo/> */}
+      {/* <CounterOne/> */}
+    </div>
+  );
 }
 
 export default App;
