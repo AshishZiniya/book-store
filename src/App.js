@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css';
-import ClassTimer from './component/ClassTimer';
-import HookTimer from './component/HookTimer';
-// import FocusInput1 from './component/FocusInput1';
+import UserForm1 from './component/UserForm1';
+// import CounterOne1 from './component/CounterOne1';
+// import CounterTwo1 from './component/CounterTwo1';
+// import DocTitleOne from './component/DocTitleOne';
+// import DocTitleTwo from './component/DocTitleTwo';
 
 function App() {
   return (
-      <div className="App">
-        <ClassTimer/>
-        <HookTimer/>
-        {/* <FocusInput1/> */}
-      </div>
+    <div className="App">
+      <UserForm1/>
+      {/* <CounterOne1/> */}
+      {/* <CounterTwo1/> */}
+      {/* <DocTitleOne /> */}
+      {/* <DocTitleTwo /> */}
+    </div>
   );
 }
 
