@@ -1,46 +1,34 @@
-import React, { Component } from 'react'
+import React, { useMemo, useState } from 'react'
 
-class Counter extends Component {
+function Counter() {
+    const [counterOne, setCounterOne] = useState(0)
+    const [counterTwo, setCounterTwo] = useState(0)
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            count: 0
-        }
+    const increamentOne = () => {
+        setCounterOne(counterOne + 1)
     }
 
-    increament() {
-        // this.setState(
-        //     {
-        //         count: this.state.count + 1
-        //     },
-        //     () => {
-        //         console.log('callback value', this.state.count)
-        //     }
-        // )
-        
-        this.setState((prevState, props) =>({
-            count: prevState.count + 1
-        }))
-        console.log(this.state.count)
+    const increamentTwo = () => {
+        setCounterTwo(counterTwo + 1)
     }
 
-    increamentFive() {
-        this.increament()
-        this.increament()
-        this.increament()
-        this.increament()
-        this.increament()
-    }
+    const isEven = useMemo(() => {
+        let i = 0
+        while(i<2000000000) i++
+        return counterOne % 2 === 0
+    }, [counterOne])
 
-    render() {
-        return (
-            <div>
-                <div>Count - {this.state.count}</div>
-                <button onClick={() => this.increamentFive()}>Increament</button>
-            </div>
-        )
-    }
+  return (
+    <div>
+      <div>
+        <button onClick={increamentOne}>Count One - {counterOne}</button>
+        <span>{isEven() ? 'Even':'Odd' }</span>
+      </div>
+      <div>
+        <button onClick={increamentTwo}>Count Two - {counterTwo}</button>
+      </div>
+    </div>
+  )
 }
 
 export default Counter
