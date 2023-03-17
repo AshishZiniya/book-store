@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
-import UseState from './component/UseState';
+import ArrayUseState from './component/ArrayUseState';
+// import ObjectUseState from './component/ObjectUseState';
+// import UseReducer from './component/UseReducer';
+// import UseState from './component/UseState';
 
 function App() {
   return (
     <div className="App">
-     <UseState/>
+      <ArrayUseState/>
+      {/* <ObjectUseState/> */}
+     {/* <UseReducer/> */}
+     {/* <UseState/> */}
     </div>
   );
 }
