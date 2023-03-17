@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-// import ParentComponent from './component/ParentComponent'
-import Counter from './component/Counter'
+import ClassTimer from './component/ClassTimer';
+import HookTimer from './component/HookTimer';
+// import FocusInput1 from './component/FocusInput1';
 
 function App() {
   return (
       <div className="App">
-        <Counter/>
-        {/* <ParentComponent/> */}
+        <ClassTimer/>
+        <HookTimer/>
+        {/* <FocusInput1/> */}
       </div>
   );
 }
