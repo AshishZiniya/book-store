@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import ArrayUseState from './component/ArrayUseState';
-// import ObjectUseState from './component/ObjectUseState';
-// import UseReducer from './component/UseReducer';
-// import UseState from './component/UseState';
+// import ChildOne from './component/ChildOne';
+import GrandParent from './component/GrandParent';
+// import Parent from './component/Parent';
+// import ParentOne from './component/ParentOne';
+
 
 function App() {
   return (
     <div className="App">
-      <ArrayUseState/>
-      {/* <ObjectUseState/> */}
-     {/* <UseReducer/> */}
-     {/* <UseState/> */}
+      <GrandParent/>
+      {/* <Parent/> */}
+      {/* <ParentOne>
+        <ChildOne/>
+      </ParentOne> */}
     </div>
   );
 }
