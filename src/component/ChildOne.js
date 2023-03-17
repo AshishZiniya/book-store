@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ChildOne = () => {
-    console.log('Child Render')
+  console.log('Child Render')
   return (
     <div>
       Child Component
