@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import { ChildA } from './component/ContextChild';
-import ContextParent from './component/ContextParent';
+import Registration from './DemoProject/Registration/Registration';
 
 function App() {
   return (
     <div className="App">
-      <ContextParent>
-        <ChildA/>
-      </ContextParent>
+      <Registration/>
     </div>
   );
 }
