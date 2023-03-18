@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useMemo, useCallback } from 'react'
 // import {MemoizedChildThree} from './ChildThree'
 import {MemoizedChildFive} from './ChildFive'

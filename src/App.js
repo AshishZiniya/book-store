@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
-// import ParentThree from './component/ParentThree';
-// import ParentTwo from './component/ParentTwo';
-import ParentFour from './component/ParentFour'
+import { ChildA } from './component/ContextChild';
+import ContextParent from './component/ContextParent';
 
 function App() {
   return (
     <div className="App">
-      <ParentFour/>
-      {/* <ParentThree/> */}
-      {/* <ParentTwo/> */}
+      <ContextParent>
+        <ChildA/>
+      </ContextParent>
     </div>
   );
 }
