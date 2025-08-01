@@ -18,4 +18,6 @@ function getBooks() {
   return books;
 }
 
-export default { addBook , removeBook , getBooks };
+const CartBooks = { addBook, removeBook, getBooks };
+
+export default CartBooks;

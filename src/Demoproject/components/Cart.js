@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "../css/cart.css";
 
 import Navbar from "./Navbar";
 import { GlobalContext } from "./GlobalProvider";
 
 const Cart = () => {
-  const {currentUser} = useContext(GlobalContext)
+  const {currentUser, books, bookCart, removeBook} = useContext(GlobalContext)
   console.log(currentUser)
   return (
     <>
@@ -27,6 +28,7 @@ const Cart = () => {
                           <img
                             src={bookData.thumbnailUrl}
                             className="img-fluid w-75 rounded-3"
+                            alt={bookData.title}
                           />
                         </div>
                         <div className="col-md-3 col-lg-3 col-xl-3">
@@ -62,7 +64,7 @@ const Cart = () => {
                           <button
                             className="btn btn-link px-2"
                             onClick={() => {
-                              CartBooks.removeBook(bookData.id);
+                              removeBook(bookData.id);
                             }}
                           >
                             <i className="fa-solid fa-trash"></i>
@@ -88,7 +90,7 @@ const Cart = () => {
                     (<strong>{bookCart.length}</strong>) items
                   </span>
                 </div>
-                {!bookCart.length == 0 ? (
+                {!bookCart.length === 0 ? (
                   bookCart.map((bookData) => (
                     <div className="ibox-content">
                       <div className="table-responsive">
@@ -128,14 +130,14 @@ const Cart = () => {
                                   </dd>
                                 </dl>
                                 <div className="m-t-sm">
-                                  <a href="#" className="text-muted mx-2">
+                                  <button className="text-muted mx-2 border-0 bg-transparent">
                                     <i className="fa fa-gift" /> Add gift
                                     package
-                                  </a>
+                                  </button>
                                   |
-                                  <a href="#" className="text-muted mx-2">
+                                  <button className="text-muted mx-2 border-0 bg-transparent">
                                     <i className="fa fa-trash" /> Remove item
-                                  </a>
+                                  </button>
                                 </div>
                               </td>
                              
@@ -164,7 +166,7 @@ const Cart = () => {
                 )}
               </div>
             </div>
-            {!bookCart.length == 0 ? (
+            {!bookCart.length === 0 ? (
               <div className="col-md-3">
                 <div className="ibox">
                   <div className="ibox-title">
@@ -180,12 +182,12 @@ const Cart = () => {
                     </span>
                     <div className="m-t-sm my-3">
                       <div className="btn-group mx-2">
-                        <a href="#" className="btn btn-primary btn-sm mx-2">
+                        <button className="btn btn-primary btn-sm mx-2">
                           <i className="fa fa-shopping-cart" /> Checkout
-                        </a>
-                        <a href="#" className="btn btn-white btn-sm">
+                        </button>
+                        <button className="btn btn-white btn-sm">
                           Cancel
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
