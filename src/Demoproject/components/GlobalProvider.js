@@ -76,6 +76,7 @@ export const GlobalProvider = ({ children }) => {
         registerUser,
         checkCredentials,
         addBook,
+        getBookcart,
         removeBook,
       }}
     >
