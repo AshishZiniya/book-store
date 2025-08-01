@@ -10,7 +10,7 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      {/* <section className="h-100" style={{ backgroundColor: "#eee" }}>
+      <section className="h-100" style={{ backgroundColor: "#eee" }}>
         <div className="container h-100 py-5">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-10">
@@ -76,8 +76,8 @@ const Cart = () => {
             </div>
           </div>
         </div>
-      </section> */}
-      {/* <div className="container my-1">
+      </section>
+      <div className="container my-1">
         <div className="wrapper wrapper-content animated fadeInRight">
           <div className="row">
             <div className="col-md-9">
@@ -208,7 +208,7 @@ const Cart = () => {
             ) : null}
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

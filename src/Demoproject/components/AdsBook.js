@@ -10,7 +10,7 @@ const AdsBook = () => {
           efforts with this example based on Apple’s marketing pages.
         </p>
         <a className="btn btn-outline-secondary" href="/">
-          Coming soon
+          Coming soon Very Soon.
         </a>
       </div>
     </div>
